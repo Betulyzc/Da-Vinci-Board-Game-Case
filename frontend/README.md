@@ -1,69 +1,32 @@
-# React + TypeScript + Vite
+# Frontend - Da Vinci Board Game Case 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Bu proje React + TypeScript + Vite kullanılarak geliştirilmiş frontend uygulamasıdır.  
+SPA routing için Vercel üzerinde `vercel.json` yapılandırması kullanılmıştır.  
 
-Currently, two official plugins are available:
+## Teknolojiler
+- React  
+- TypeScript  
+- Vite  
+- TailwindCSS  
+- Framer Motion  
+- Lucide Icons  
+- React Router  
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Çalıştırma
 
-## Expanding the ESLint configuration
+### 1. Canlı olarak test etmek için
+- Frontend adresi: [da-vinci-board-game-case-rips.vercel.app](https://da-vinci-board-game-case-rips.vercel.app)  
+- Uygulama backend API’sine `https://da-vinci-board-game-case.onrender.com` üzerinden istek atar.  
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### 2. Kendi bilgisayarında çalıştırmak için
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+cd frontend
+npm install
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+### SPA routing sorunu için kök dizinde vercel.json dosyası eklenmiştir:
+{
+  "rewrites": [{ "source": "/(.*)", "destination": "/" }]
+}
