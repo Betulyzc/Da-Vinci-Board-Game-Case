@@ -1,0 +1,37 @@
+@import "tailwindcss";
+
+/* Global font ve temel render ayarları */
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@keyframes shine-move {
+  0%   { background-position: 0% 50%; }
+  100% { background-position: 200% 50%; } 
+}
+.animate-shine {
+  animation: shine-move 4s linear infinite;
+}
+
+/*
+.animate-gradient {
+  animation: gradient-slide 6s ease-in-out infinite;
+}
+*/
+
+/* Link stili */
+a {
+  font-weight: 500;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
