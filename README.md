@@ -6,6 +6,10 @@ Frontend kısmı React + TypeScript + Vite ile, backend kısmı ise NestJS ile g
 - Frontend: React, TypeScript, Vite, TailwindCSS, Framer Motion, Lucide Icons (Vercel'de host edildi)
 - Backend: NestJS (Node.js), TypeScript (Renner'da host edildi)
 
+⚠️ Uyarı: Backend Render'ın ücretsiz sürümünde deploy edildiği için,
+API isteklerinde ilk çağrıda birkaç saniyelik gecikme (cold start) yaşanabilir.
+Bu normal bir durumdur. Ücretli sürümlerde bu gecikme ortadan kalkar.
+
 ##  Canlı Linkler
 - Frontend: [da-vinci-board-game-case-rips.vercel.app](https://da-vinci-board-game-case-rips.vercel.app)  
 - Backend API: `https://da-vinci-board-game-case.onrender.com`  
@@ -38,4 +42,5 @@ npm install
 npm run start:dev
 ```
 -Varsayılan olarak http://localhost:3000 adresinde çalışır.
+
 
